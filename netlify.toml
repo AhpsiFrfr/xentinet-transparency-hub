@@ -6,5 +6,5 @@
   NODE_VERSION = "18"
 
 [build.image]
-  # Use the latest Ubuntu Focal build image
-  image = "focal"
+  # Use the latest Ubuntu Noble build image
+  image = "noble"

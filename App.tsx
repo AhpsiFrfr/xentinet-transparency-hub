@@ -4,30 +4,18 @@ import LandingPage from './components/LandingPage';
 import TransparencyHub from './components/TransparencyHub';
 import GeminiDemo from './components/GeminiDemo';
 import InfoPage from './components/InfoPage';
+import AnimatedBackground from './components/AnimatedBackground';
+import { NIGHT_SKY_URL } from './constants/backgroundImages';
 
-const DataStreamBackground: React.FC = () => (
-  <div className="data-stream-container">
-    {[...Array(20)].map((_, i) => (
-      <div
-        key={i}
-        className="data-stream-line"
-        style={{
-          left: `${Math.random() * 100}%`,
-          animationDuration: `${10 + Math.random() * 20}s`,
-          animationDelay: `${Math.random() * -20}s`,
-        }}
-      />
-    ))}
-  </div>
-);
+// App component with AnimatedBackground
 
 const App: React.FC = () => {
   const [view, setView] = useState<'landing' | 'hub' | 'ai' | 'info'>('landing');
 
   return (
-    <div className="relative min-h-screen bg-black text-gray-300 p-4 sm:p-6 lg:p-8 overflow-y-auto">
-      <DataStreamBackground />
-      <div className="relative z-10">
+    <AnimatedBackground backgroundImage={NIGHT_SKY_URL}>
+      <div className="relative min-h-screen text-gray-300 p-4 sm:p-6 lg:p-8 overflow-y-auto">
+        <div className="relative z-10">
         {view === 'landing' ? (
           <LandingPage 
             navigateToHub={() => setView('hub')} 
@@ -44,8 +32,9 @@ const App: React.FC = () => {
         ) : (
           <InfoPage navigateToLanding={() => setView('landing')} />
         )}
+        </div>
       </div>
-    </div>
+    </AnimatedBackground>
   );
 };
 

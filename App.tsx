@@ -6,6 +6,7 @@ import GeminiDemo from './components/GeminiDemo';
 import InfoPage from './components/InfoPage';
 import AnimatedBackground from './components/AnimatedBackground';
 import { NIGHT_SKY_URL } from './constants/backgroundImages';
+import './styles.css';
 
 // App component with AnimatedBackground
 

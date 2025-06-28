@@ -40,20 +40,41 @@ const TransparencyHub: React.FC<TransparencyHubProps> = ({ navigateToLanding, na
             <div className="w-4 h-4 rounded-full bg-cyan-400 animate-pulse"></div>
           </button>
         </div>
-        <img
-          src={XENTICORE_LOGO_DATA_URI}
-          alt="Xentinet Logo"
-          style={{
-            position: 'relative',
-            zIndex: 9999,
-            display: 'inline-block',
-            width: '10rem', // Doubled from 5rem
-            height: '10rem', // Doubled from 5rem
-            objectFit: 'contain',
-            marginBottom: '1rem',
-            filter: 'drop-shadow(0 0 15px rgba(59, 130, 246, 0.9))',
-          }}
-        />
+        <div className="flex justify-center items-center mb-4">
+          <div 
+            className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-red-500 flash-animation mx-4"
+            style={{ 
+              textShadow: '0 0 20px rgba(239, 68, 68, 0.9), 0 0 30px rgba(239, 68, 68, 0.7)', 
+              letterSpacing: '1px',
+              transform: 'rotate(-5deg)'
+            }}
+          >
+            REAL-TIME DATA<br/>COMING SOON
+          </div>
+          <img
+            src={XENTICORE_LOGO_DATA_URI}
+            alt="Xentinet Logo"
+            style={{
+              position: 'relative',
+              zIndex: 9999,
+              display: 'inline-block',
+              width: '10rem', // Doubled from 5rem
+              height: '10rem', // Doubled from 5rem
+              objectFit: 'contain',
+              filter: 'drop-shadow(0 0 15px rgba(59, 130, 246, 0.9))',
+            }}
+          />
+          <div 
+            className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-red-500 flash-animation mx-4"
+            style={{ 
+              textShadow: '0 0 20px rgba(239, 68, 68, 0.9), 0 0 30px rgba(239, 68, 68, 0.7)', 
+              letterSpacing: '1px',
+              transform: 'rotate(5deg)'
+            }}
+          >
+            REAL-TIME DATA<br/>COMING SOON
+          </div>
+        </div>
         <h1 className="text-4xl md:text-5xl font-bold text-gray-100 animate-subtle-glow font-orbitron">XENTINET TRANSPARENCY HUB</h1>
         <p className="text-blue-400 mt-2 text-lg md:text-xl">Proof Over Promises. Defense Over Hype.</p>
       </header>

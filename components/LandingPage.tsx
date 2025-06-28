@@ -9,7 +9,7 @@ interface LandingPageProps {
 
 const LandingPage: React.FC<LandingPageProps> = ({ navigateToHub, navigateToAI, navigateToInfo }) => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen text-center px-4">
+    <div className="flex flex-col items-center justify-center min-h-screen text-center px-4 pb-16">
       <header className="mb-8 flex flex-col items-center">
         <img
           src={XENTICORE_LOGO_DATA_URI}
@@ -38,14 +38,14 @@ const LandingPage: React.FC<LandingPageProps> = ({ navigateToHub, navigateToAI, 
           Establish Secure Connection
         </button>
         <button 
-          onClick={navigateToHub}
+          onClick={navigateToAI}
           className="px-8 py-4 font-bold text-lg font-orbitron text-gray-300 bg-gray-800/50 border-2 border-gray-700 rounded-lg hover:bg-gray-700/70 hover:border-blue-400 hover:text-white transition-all duration-300">
-          Xenti-Dox Transparency Hub
+          Xenti-Core AI Assistant
         </button>
         <button 
-          onClick={navigateToAI}
+          onClick={navigateToHub}
           className="px-8 py-4 font-bold text-lg font-orbitron text-cyan-300 bg-blue-900/30 border-2 border-cyan-700 rounded-lg hover:bg-blue-800/50 hover:border-cyan-400 hover:text-white hover:shadow-[0_0_15px_rgba(34,211,238,0.5)] transition-all duration-300">
-          Xenti-Core AI Assistant
+          Xenti-Dox Transparency Hub
         </button>
       </div>
 

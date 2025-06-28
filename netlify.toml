@@ -4,7 +4,5 @@
 
 [build.environment]
   NODE_VERSION = "18"
-
-[build.image]
-  # Use the latest Ubuntu Noble build image
-  image = "noble"
+  # Use Ubuntu Focal 20.04 (LTS)
+  NETLIFY_USE_FOCAL = "true"
